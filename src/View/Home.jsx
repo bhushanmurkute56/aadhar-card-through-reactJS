@@ -65,7 +65,7 @@ function Home() {
 
           <label htmlFor="AadharNo">Aadhar Number:</label><br />
           <input type="number" 
-          id="AadharNo" 
+          id="AadharNo"
           name='aadhar' 
           value={aadhar}
           onChange={(e) => setAadhar(e.target.value)}

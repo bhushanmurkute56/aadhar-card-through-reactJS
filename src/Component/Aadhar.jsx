@@ -24,7 +24,8 @@ function Aadhar() {
             <h1 className='font-semibold ml-[-0px]'>{gender}</h1>
             <h1 className='font-semibold ml-[30px]'>{dob}</h1>
             <h1 className='font-bold text-2xl mt-3 ml-[50px]'>{aadhar}</h1>
-            <img src={gender == "Male"? manImg : womanImg} alt="" className='h-[110px] w-[110px] absolute left-2 top-[125px] bg-gray-200 rounded-xl p-1'/>
+            <img src={gender == "Male"? manImg : ""} alt="" className='h-[110px] w-[110px] absolute left-2 top-[125px] bg-gray-200 rounded-xl p-1'/>
+            <img src={gender == "Female"? womanImg : ""} alt="" className='h-[110px] w-[110px] absolute left-2 top-[125px] bg-gray-200 rounded-xl p-1'/>
             <div className='p-4 mt-2'>
               <h1 className='border-t-2 border-brown-400 text-xl font-bold'>
                 MY AADHAR
