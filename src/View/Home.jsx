@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { useState } from 'react';
+import aadharimg from "./../assets/aadhar-card-pp4.avif"
 
 function Home() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,11 +17,11 @@ function Home() {
 
   return (
     <div className=''>
-      <div className='h-20 bg-gray-200 flex justify-center items-center text-2xl border-2 border-b-black'>
-        Aadhar Card Maker
+      <div className='h-20 bg-gray-200 flex justify-center items-center text-2xl border-b-1 border-gray-400 text-gray-700'>
+        Aadhar Card Maker <img src={aadharimg} alt="" className='h-12 w-16 border-none shadow-none ml-1 p-1'/>
       </div>
       
-      <div className="h-[460px] w-[300px] bg-gray-100 mx-auto mt-20 p-5 border rounded-xl">
+      <div className="h-[460px] w-[300px] bg-gray-100 mx-auto mt-20 p-5 rounded-xl shadow-2xl border-gray-300 border-1">
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName">First Name : </label><br />
           <input type="text" 
@@ -28,7 +29,7 @@ function Home() {
           name='firstname' 
           value={firstName}
           onChange={(e) => setFirstName(e.target.value.toUpperCase())} 
-          className="border mb-2 p-1 w-full" required /><br />
+          className="border mb-2 p-1 w-full bg-white rounded-md" required /><br />
 
           <label htmlFor="lastName">Last Name:</label><br />
           <input type="text" 
@@ -36,7 +37,7 @@ function Home() {
           name='lastname' 
           value={lastName}
           onChange={(e) => setLastName(e.target.value.toUpperCase())}
-          className="border mb-2 p-1 w-full"
+          className="border mb-2 p-1 w-full bg-white rounded-md"
           required /><br />
 
           <label htmlFor="gender">Gender : </label><br />
@@ -45,7 +46,7 @@ function Home() {
           id="gender" 
           value={gender}
           onChange={(e) => setGender(e.target.value)}
-          className="border mb-2 p-1 w-full"
+          className="border mb-2 p-1 w-full bg-white rounded-md"
           required
           >
             <option value="">Please choose an option : </option>
@@ -61,7 +62,7 @@ function Home() {
           name='DOB'
           value={dob}
           onChange={(e) => setDob(e.target.value)}
-          className="border mb-2 p-1 w-full" required /><br />
+          className="border mb-2 p-1 w-full bg-white rounded-md" required /><br />
 
           <label htmlFor="AadharNo">Aadhar Number:</label><br />
           <input type="number" 
@@ -69,11 +70,11 @@ function Home() {
           name='aadhar' 
           value={aadhar}
           onChange={(e) => setAadhar(e.target.value)}
-          className="border mb-2 p-1 w-full" required /><br />
+          className="border mb-2 p-1 w-full bg-white rounded-md" required/><br />
 
           <div className='flex flex-col'>
             <div className="flex justify-center mt-2">
-              <button className="border-2 px-4 py-1 rounded-md cursor-pointer" type='submit'>
+              <button className="border-2 px-4 py-1 rounded-md cursor-pointer hover:bg-gray-300" type='submit'>
                 Submit
               </button>
             </div>
