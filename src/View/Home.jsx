@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useState } from 'react';
-import aadharimg from "./../assets/aadhar-card-pp4.avif"
+import aadharimg from "./../assets/aadhar-card-pp4.avif";
 
 function Home() {
   const [submitted, setSubmitted] = useState(false);
@@ -26,7 +26,7 @@ function Home() {
           <label htmlFor="firstName">First Name : </label><br />
           <input type="text" 
           id="firstName" 
-          name='firstname' 
+          name='firstname'
           value={firstName}
           onChange={(e) => setFirstName(e.target.value.toUpperCase())} 
           className="border mb-2 p-1 w-full bg-white rounded-md" required /><br />
